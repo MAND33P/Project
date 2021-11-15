@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+          <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+          <link rel = "icon" href = 
+"https://i.pinimg.com/originals/fa/4a/f6/fa4af6420e68a955720fa9cea5951d59.jpg" type="image/x-icon">  
+    <title>Donate.org</title>
+    <!-- css in and as STYLE tag -->
+    <style>
+      
+      .contianer , .con{
+        background-color: black;     
+        display: flex;
+        padding: 15px;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+      }
+      a:link {
+       color: rgba(105, 104, 104, 0.877);
+      background-color: transparent;
+      text-decoration: none;
+      }
+
+      a:hover {
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+      }
+      
+      .quote{
+        padding-right: 2%;
+      }
+
+      /* end Roll */
+    
+    </style>
+
+</head>
+<body>
+    <!-- Navigation bar -->
+    
+<nav class="navbar sticky-top navbar-light bg-light">
+    <div class="container-fluid">
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" id="rzp-button1">DONATE NOW</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">CORONA RELIEF FUND</a>
+            </li>                      
+          </ul>
+    </div>
+</nav>
+
+<!-- image -->
+<div class="im">
+  <img src="5392809.jpg" class="img-fluid" alt="corona warrior"> 
+</div>
+<!-- RAZOR PAY -->
+<script>
+var options = {
+    "key": "rzp_test_SmtzNz68BPNhut", // Enter the Key ID generated from the Dashboard
+    "amount": "500", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "Mandeep Singh",
+    "description": "Test Transaction",
+    "image": "https://www.pinclipart.com/picdir/middle/180-1801203_indian-rs-symbol-images-indian-rupee-symbol-png.png",
+    "order_id": "order_I8uE6cc8Y7kMbc", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "handler": function (response){
+        alert(response.razorpay_payment_id);
+        alert(response.razorpay_order_id);
+        alert(response.razorpay_signature)
+    },
+    "prefill": {
+        "name": "Mandeep Singh",
+        "email": "mandeep80555@gmail.com",
+        "contact": "9999086569"
+    },
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+rzp1.on('payment.failed', function (response){
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+});
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+</script>
+
+<!-- End Credits -->
+<div class="contianer" >
+  <ul style="list-style: none;">  
+    <li><a href=" "><h4>Contact Us</h4></a></li>
+    <li><a href="https:/www.Linkedin.com">Linkedin</a></li>
+    <li><a href="https:/www.twitter.com">Twitter</a></li>
+    <li><a href="https:/www.Instagram.com">Instagram</a></li>
+    <li><a href="https:/www.Github.com">Github</a></li>
+    <li><a href=" "><h4>Links</h4></a></li>
+    <li><a href="x.html">Home</a></li>  
+    <li><a href="y.html">Feedback form</a></li>  
+    <li><a href="https://www.cowin.gov.in/">Book your Corona vaccine </a></li> 
+    <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?adgroupsurvey={adgroupsurvey}&gclid=EAIaIQobChMIobT9gO_G8wIVgpRmAh2LeA5sEAAYASAAEgLjrfD_BwE">World Health Organization</a></li>  
+  </ul>
+</div>
+<div class="con">
+  <ul style="list-style:none" >
+  <li>© 2021 All rights reserved. Mandy Exclusives co.</li>
+  
+</ul>
+</div>
+<!-- end roll -->
+
+</body>
+</html>
