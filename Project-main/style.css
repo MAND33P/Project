@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto Sans'); 
+*,
+*:after,
+*:before{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+.counter-section{
+    background: linear-gradient(to right, #0D6EFD, #2477f5);
+    color: white;
+    padding: 2.5rem 0;
+
+}
+
+.counter-section p{
+    color: white;
+    text-transform: uppercase;
+    
+}
+
+/* ::-webkit-scrollbar{
+    width: 0.325rem;
+}
+::-webkit-scrollbar-track{
+    background: white;
+}
+::-webkit-scrollbar-thumb{
+    background: #0D6EFD;
+} */
+.navbar-brand{
+    font-family: Noto Sans;
+    
+
+
+}
+.navbar{
+    padding: 10px;
+}
+.mt-4{
+    padding: 2vh;
+}
+
+.top-banner{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    width: 100%;
+    background: url('http://www.emro.who.int/images/stories/coronavirus/how_to_stop_covid_19.jpg') no-repeat left; 
+    background-size: cover;
+    padding: 5.75rem 0 9.35rem;
+
+}
+#quote {
+    font-family: 'Muli', sans-serif;
+    font-style: oblique ;
+    color: rgb(255, 246, 246);
+    font-weight: 400;
+}   
+
+/* ori */
+.contianer , .con{
+    background-color: black;     
+    display: flex;
+    padding: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+  }
+  a:link {
+   color: rgba(105, 104, 104, 0.877);
+  background-color: transparent;
+  text-decoration: none;
+  }
+
+  a:hover {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+  }
+  /* .land{
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: auto;
+    background :url("https://img.freepik.com/free-vector/covid-19-novel-coronavirus-banner-with-microscopic-viruses_1017-24393.jpg?size=626&ext=jpg");
+  } */
+
+  /* ori, */
+.grid1{
+    padding: 1rem;
+}
+
+  /* RESPonsive  cSS */
+
+  /* @media(max-width:991px){
+      .top-banner{
+          padding: 9.5rem 0 9.5rem ;
+      }
+  }
+
+  @media(max-width: 767px){
+      h2{
+          font-size: 2rem;
+          line-height: 2.06rem;
+      }
+  } */
